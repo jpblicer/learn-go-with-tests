@@ -29,7 +29,7 @@ func TestArea(t* testing.T) {
 		want := 314.1592653589793
 
 		if got != want {
-			t.Errorf("got g% want g%", got, want)
+			t.Errorf("got %g want %g", got, want)
 		}
 	})
 
