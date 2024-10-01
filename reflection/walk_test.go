@@ -1,6 +1,9 @@
 package reflection
 
-import "testing"
+import (
+	"testing"
+	"reflect"
+)
 
 func TestWalk(t *testing.T) {
 
@@ -13,8 +16,9 @@ func TestWalk(t *testing.T) {
 			"struct with one string field",
 			struct {
 				Name string
-			}{"Chris"},
-			[]string{"Chris"},
+				City string
+			}{"Chris", "London"},
+			[]string{"Chris", "London"},
 		},
 	}
 
