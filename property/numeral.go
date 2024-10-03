@@ -6,17 +6,19 @@ func ConvertToRoman(arabic int) string {
 
 	var result strings.Builder
 
-	for i := arabic; i > 0; i-- {
-		if i == 5 {
+	for arabic > 0 {
+		switch {
+		case arabic > 4:
 			result.WriteString("V")
-			break
-		}
-		if i == 4 {
+			arabic -= 5
+		case arabic > 3:
 			result.WriteString("IV")
-			break
-		}
-		result.WriteString("I")
-	}
+			arabic -= 4
+		default:
+			result.WriteString("I")
+			arabic--
 
+		}
+	}
 	return result.String()
 }
