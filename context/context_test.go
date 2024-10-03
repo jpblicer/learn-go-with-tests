@@ -57,24 +57,23 @@ func TestServer(t *testing.T) {
 		}
 	})
 }
-	// t.Run("tells store to cancel work if request is cancelled", func(t *testing.T) {
-	// 	data := "hello, world"
-	// 	store := &SpyStore{response: data, t: t}
-	// 	svr := Server(store)
 
-	// 	request := httptest.NewRequest(http.MethodGet, "/", nil)
+// t.Run("tells store to cancel work if request is cancelled", func(t *testing.T) {
+// 	data := "hello, world"
+// 	store := &SpyStore{response: data, t: t}
+// 	svr := Server(store)
 
-	// 	cancellingCtx, cancel := context.WithCancel(request.Context())
-	// 	time.AfterFunc(5*time.Millisecond, cancel)
-	// 	request = request.WithContext(cancellingCtx)
+// 	request := httptest.NewRequest(http.MethodGet, "/", nil)
 
-	// 	response := httptest.NewRecorder()
+// 	cancellingCtx, cancel := context.WithCancel(request.Context())
+// 	time.AfterFunc(5*time.Millisecond, cancel)
+// 	request = request.WithContext(cancellingCtx)
 
-	// 	svr.ServeHTTP(response, request)
+// 	response := httptest.NewRecorder()
 
-	// 	if !store.cancelled {
-	// 		t.Error("store was not told to cancel")
-	// 	}
-	// })
+// 	svr.ServeHTTP(response, request)
 
-
+// 	if !store.cancelled {
+// 		t.Error("store was not told to cancel")
+// 	}
+// })
