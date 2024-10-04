@@ -12,6 +12,6 @@ func TestSecondsInRadians(t *testing.T) {
 	got := secondsInRadians(thirtySeconds)
 
 	if want != got {
-		t.Fatalf("Wanted %v but got %v", got, want)
+		t.Fatalf("Wanted %v but got %v", want, got)
 	}
 }
